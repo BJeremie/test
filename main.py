@@ -1,6 +1,7 @@
 import json
 import datetime
-
+import re
+ 
 data = [
    {
      'id':72941762,
@@ -32,6 +33,15 @@ data = [
    }
 ]
 
-print('\n\n')
+for i in data:
+    print(i['relates-to']) # print the id, description and rating of each item in the list
+    
+    if i['description']!=None:
+      get_detail=(i['description']) # print the description of each item in the list   
+      split=re.split('; |, |\*|\n',get_detail) # split the description into a list
 
-message =json.loads(data)
+      
+      for word in split:
+        if word.startswith('CVE'):
+          print(word)
+ 
