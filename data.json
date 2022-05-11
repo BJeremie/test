@@ -1,6 +1,3 @@
-import json
-import datetime
-
 data = [
    {
      'id':72941762,
@@ -31,7 +28,3 @@ data = [
      'published':datetime.datetime(2018, 1, 1, 1, 31, 41, 33291)
    }
 ]
-
-print('\n\n')
-
-message =json.loads(data)
